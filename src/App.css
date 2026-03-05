@@ -1,0 +1,57 @@
+/* App-specific styles */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: #B9FF66;
+  color: #000;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #B9FF66;
+  outline-offset: 2px;
+}
+
+/* Button hover transitions */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #f3f3f3;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

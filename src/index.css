@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 80 85% 65%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 80 85% 65%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 80 85% 65%;
+    --radius: 0.5rem;
+    --lime: 80 85% 65%;
+    --dark: 0 0% 0%;
+    --light: 0 0% 100%;
+    --gray: 0 0% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-premium {
+    @apply px-8 py-4 rounded-xl font-medium transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-premium-primary {
+    @apply btn-premium bg-black text-white hover:bg-neutral-800;
+  }
+
+  .btn-premium-secondary {
+    @apply btn-premium bg-lime text-black border border-black hover:bg-white hover:shadow-premium;
+  }
+
+  .card-premium {
+    @apply p-8 rounded-[2.5rem] border-2 border-black transition-all duration-500 bg-white;
+  }
+
+  .card-premium-hover {
+    @apply hover:shadow-premium-hover hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-lime {
+    background-color: hsl(var(--lime));
+  }
+
+  .text-lime {
+    color: hsl(var(--lime));
+  }
+
+  .border-lime {
+    border-color: hsl(var(--lime));
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Logo carousel animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Page Transition Styles */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 500ms, transform 500ms;
+}
