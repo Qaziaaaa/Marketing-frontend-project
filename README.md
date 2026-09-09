@@ -1,22 +1,50 @@
 # Marketing Frontend Project
 
-Conversion-focused marketing landing page built with React and TypeScript. Features responsive sections, modern styling, and performance-optimized components.
+Modern marketing landing page built with React, TypeScript, and a comprehensive UI component library. Features animations, forms, and responsive layouts.
+
+## Features
+
+- Modern marketing page layouts
+- Radix UI component primitives
+- Framer Motion animations
+- Form handling with React Hook Form + Zod
+- Responsive design with Tailwind CSS
+- Dark mode support
 
 ## Tech Stack
 
-- **Framework**: React 18
-- **Language**: TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
+| Category | Technology |
+|----------|-----------|
+| Framework | React 19, TypeScript |
+| UI Components | Radix UI, shadcn/ui patterns |
+| Animation | Framer Motion |
+| Forms | React Hook Form, Zod |
+| Styling | Tailwind CSS |
+| Build Tool | Vite |
 
 ## Getting Started
 
-1. Clone the repository
-2. Install dependencies: \
-pm install\
-3. Run development server: \
-pm run dev\
+```bash
+# Clone the repository
+git clone https://github.com/Qaziaaaa/Marketing-frontend-project.git
+cd Marketing-frontend-project
 
----
+# Install dependencies
+npm install
 
-Built by [Qaziaaaa](https://github.com/Qaziaaaa)
+# Start development server
+npm run dev
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | TypeScript build + Vite build |
+| `npm run lint` | Run ESLint |
+| `npm run preview` | Preview production build |
+
+## License
+
+MIT
